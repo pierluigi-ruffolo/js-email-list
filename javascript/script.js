@@ -14,6 +14,8 @@ const elementList = document.querySelector("ul");
 const btnElement = document.querySelector(".btn");
 const urlAPi = "https://flynn.boolean.careers/exercises/api/random/mail";
 
+btnElement.addEventListener("click", generaEmail);
+
 generaEmail();
 
 function generaEmail() {
