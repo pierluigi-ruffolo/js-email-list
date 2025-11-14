@@ -10,7 +10,7 @@ Inserire un bottone che al click faccia il fetch altre 10 mail
 (sostituendo quelle precedenti)
 Far sì che le email vengono stampati solo quando arrivano tutti i 
 10 email */
-const ElementList = document.querySelector("ul");
+const elementList = document.querySelector("ul");
 const btnElement = document.querySelector(".btn");
 const urlAPi = "https://flynn.boolean.careers/exercises/api/random/mail";
 
@@ -29,7 +29,7 @@ function generaEmail() {
         }
       })
       .catch((errore) => {
-        ElementList.innerHTML = `<li class="list-group-item text-center">Errore: ${errore}</li>`;
+        elementList.innerHTML = `<li class="list-group-item text-center">Errore: ${errore}</li>`;
       });
   }
 }
@@ -39,5 +39,5 @@ function componeEmailInpagina(array) {
   array.forEach((mail) => {
     risultato += `<li class="list-group-item text-center">${mail}</li>`;
   });
-  ElementList.innerHTML = risultato;
+  elementList.innerHTML = risultato;
 }
